@@ -1,0 +1,73 @@
+.navbar-cotent{
+   background-image: url(/images/hero-bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: white;
+   height: 600px;
+}
+//Top
+.navbsr-top{
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+//main-navbar
+.navbar{
+    display: flex;
+    align-items: center;
+}
+//top left
+.navbar-left{
+    margin-left: 64px;
+    ul{
+        display: flex;
+        gap: 32px;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color:$cl-btn;
+    }
+}
+//top right
+.navbar-right{
+    display: flex;
+    align-items: center;
+    margin-left: 54px;
+    gap: 32px;
+    ul{
+        display: flex;
+        gap: 32px;
+        list-style: none;
+    }
+    a{
+        color: white;
+    }
+    button{
+       height: 32px;
+       border-radius: $border-btn;
+       width: 100px;
+       background-color: $bg-btn;
+       border:none;
+       color:$cl-btn;
+    }
+}
+//bottom
+
+.navbar-bottom{
+    margin-top: 64px;
+    width: 50%;
+    p{
+        margin-top: 24px;
+    }
+   
+    button{
+        margin-top: 24px;
+        height: 32px;
+        border-radius: $border-btn;
+        width: 100px;
+        background-color: $bg-btn;
+        color: white;
+        border: none;
+    }
+}

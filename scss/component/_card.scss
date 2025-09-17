@@ -1,0 +1,68 @@
+.promotion-card-maain {
+    margin-top: 40px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.promotion-card {
+    width: 45%;
+    padding: 24px 16px;
+    display: flex;
+    background: black;
+    color: white;
+    border-radius: 8px;
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        border: 3px solid white;
+    }
+
+    button {
+        margin-top: 24px;
+        height: 32px;
+        border-radius: $border-btn;
+        width: 100px;
+        background-color: $bg-btn;
+        color: white;
+        border: none;
+    }
+
+    .promotion-card-right {
+        margin-left: 24px;
+    }
+}
+
+//menu-card
+
+.menu-card {
+    width: 30%;
+    background: black;
+    color: white;
+    border-radius: 16px 16px 14px 14px;
+    .menu-img {
+        background-color: aliceblue;
+        border-radius: 14px 14px 0 40px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .menu-price {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            height: 32px;
+            border-radius: $border-btn;
+            width: 40px;
+            background-color: $bg-btn;
+            color: white;
+            border: none;                                                                                                                                                                                                                                                           
+        }
+    }
+}

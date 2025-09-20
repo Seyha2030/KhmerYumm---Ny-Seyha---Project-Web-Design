@@ -10,6 +10,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -21,9 +22,9 @@
                 <div class="navbar-left">
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./code/about.html">About</a></li>
+                        <li><a href="./code/menu.html">Menu</a></li>
+                        <li><a href="./code/contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar-right">
@@ -32,7 +33,7 @@
                         <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                         <li><a href="#"><i class="material-icons">search</i></a></li>
                     </ul>
-                    <button>Order Now</button>
+                    <button>Order Online</button>
                 </div>
             </div>
         </div>
@@ -44,7 +45,11 @@
             <button>Order Now</button>
         </div>
     </div>
+
     <section>
+
+
+        <!-- Promotion -->
         <div class="promotion-card-maain">
             <div class="promotion-card">
                 <img src="/images/f4.png" alt="">
@@ -65,7 +70,94 @@
 
         </div>
 
-    </section>
-</body>
 
+        <!-- Customers -->
+        <div class="customer-main">
+            <h2>What Says Our Customers</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h4>Mike Hamell</h4>
+                    <p>magna aliqua</p>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mike">
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                    <h4>Moana Michell</h4>
+                    <p>magna aliqua</p>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Moana">
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+                    <h4>John Smith</h4>
+                    <p>magna aliqua</p>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="John">
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Excepteur sint occaecat cupidatat non proident sunt.</p>
+                    <h4>Sara White</h4>
+                    <p>magna aliqua</p>
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sara">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="testimonial-nav">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div> 
+    </section>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-left">
+                <h2>Contact</h2>
+                <span><i class='fas fa-map-marker-alt'></i>Location         </span>
+                <span><i class="material-icons">call</i>Call+855 0715714175</span>
+                <span><i class="material-icons">email</i>bkh144740@gmail.com</span>
+            </div>
+            <div class="footer-top-center">
+                <h2>KhmerYumm</h2>
+                <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
+               <ul>
+                    <li>
+                        <a href="#">
+                        <i class="fab fa-facebook-f icon"></i>    </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-top-right">
+                <h2>Opening Hours</h2>
+                <p>Everyday</p>
+                <p>10.00 Am -10.00 Pm</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 All Rights Reserved By Free Html Templates</p>
+            <p>© Distributed By ThemeWagon</p>
+
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
 </html>

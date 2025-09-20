@@ -1,0 +1,63 @@
+//menu-card
+.menu-main{
+    margin-top: $main-margin-top;
+}
+.menu-navbar {
+    text-align: center;
+
+    .content-navbar {
+        display: flex;
+        justify-content:center;
+        gap: 40px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.menu-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.menu-card {
+    width: 30%;
+    margin-top: $main-margin-top;
+    background: black;
+    color: white;
+    border-radius: 16px 16px 14px 14px;
+
+    .menu-img {
+        background-color: aliceblue;
+        border-radius: 14px 14px 0 40px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .menu-card-content {
+        padding: $card-padding;
+    }
+
+    .menu-price {
+        display: flex;
+        justify-content: space-between;
+        padding: $card-padding;
+
+        button {
+            height: 32px;
+            border-radius: $border-btn;
+            width: 40px;
+            background-color: $bg-btn;
+            color: white;
+            border: none;
+        }
+    }
+}

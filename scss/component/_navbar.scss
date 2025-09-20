@@ -1,67 +1,86 @@
-.navbar-cotent{
-   background-image: url(/images/hero-bg.jpg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: white;
-   height: 600px;
+.navbar-cotent {
+    background-image: url(/images/hero-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 600px;
 }
+
 //Top
-.navbsr-top{
-    margin-top: 32px;
+.navbsr-top {
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
 }
+
 //main-navbar
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 64px;
 }
+
 //top left
-.navbar-left{
-    margin-left: 64px;
-    ul{
+.navbar-left {
+    ul {
         display: flex;
         gap: 32px;
         list-style: none;
     }
-    a{
+
+    a {
         text-decoration: none;
-        color:$cl-btn;
+        color: $cl-btn;
     }
 }
+
 //top right
-.navbar-right{
+.navbar-right {
     display: flex;
     align-items: center;
     margin-left: 54px;
+    margin-right: 32p;
     gap: 32px;
-    ul{
+
+    ul {
         display: flex;
         gap: 32px;
         list-style: none;
     }
-    a{
+
+    a {
         color: white;
     }
-    button{
-       height: 32px;
-       border-radius: $border-btn;
-       width: 100px;
-       background-color: $bg-btn;
-       border:none;
-       color:$cl-btn;
+
+    button {
+        height: 32px;
+        border-radius: $border-btn;
+        width: 100px;
+        background-color: $bg-btn;
+        border: none;
+        color: $cl-btn;
     }
 }
+
 //bottom
 
-.navbar-bottom{
+.navbar-bottom {
     margin-top: 64px;
     width: 50%;
-    p{
+
+    p {
         margin-top: 24px;
     }
-   
-    button{
+
+    button {
         margin-top: 24px;
         height: 32px;
         border-radius: $border-btn;

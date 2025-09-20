@@ -1,0 +1,156 @@
+.promotion-card-maain {
+  margin-top:$main-margin-top;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promotion-card {
+  width: 45%;
+  padding: 24px 16px;
+  display: flex;
+  background: black;
+  color: white;
+  border-radius: 8px;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    border: 3px solid white;
+  }
+
+  button {
+    margin-top: 24px;
+    height: 32px;
+    border-radius: $border-btn;
+    width: 100px;
+    background-color: $bg-btn;
+    color: white;
+    border: none;
+  }
+
+  .promotion-card-right {
+    margin-left: 24px;
+  }
+}
+
+//customer
+.customer-main{
+  margin-top: $main-margin-top;
+}
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #1e242c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  width: 45%;
+  position: relative;
+  display: none;
+  /* hide by default */
+}
+
+.testimonial-card h4 {
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+.testimonial-card p {
+  margin: 0;
+}
+
+.testimonial-image {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.testimonial-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #fbbf24;
+  object-fit: cover;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.testimonial-nav button {
+  width: 40px;
+  height: 40px;
+  background: #fbbf24;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.testimonial-nav button:hover {
+  background: #f59e0b;
+}
+
+footer {
+  margin-top: $main-margin-top;
+  background: #000;
+  color: white;
+  .footer-top {
+    display: flex;
+    gap: 80px;
+//Footer top left
+    .footer-top-left {
+      width: 30%;
+      display: flex;
+      text-align:center;
+      flex-direction: column;
+    }
+//Footer top center
+    .footer-top-center {
+      text-align: center;
+      width: 30%;
+      ul {
+        display: flex;
+        gap: 40px;
+        li,a{
+          height: 40px;
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          list-style: none;
+          color: #000;
+          background:white;
+          border-radius: 64px;
+        }
+      }
+    }
+//Footer top right
+.footer-top-right{
+  text-align: center;
+  width: 30%;
+}
+
+  }
+  .footer-bottom {
+    margin-top: 40px;
+    border-top: 1px solid #444;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+  }
+}

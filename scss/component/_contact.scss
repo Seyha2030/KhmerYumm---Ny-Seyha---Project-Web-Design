@@ -1,0 +1,45 @@
+.contact-main {
+    height: auto;
+    text-align: center;
+
+    button{
+        margin-top: 24px;
+        height: 32px;
+        border-radius: $border-btn;
+        width: 100px;
+        background-color: $bg-btn;
+        color: white;
+        border: none;
+    }
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    .contact-content-left {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        input {
+            height: 40px;
+            border-radius: 5px;
+            border: 0.50px solid gray;
+        }
+    }
+
+    .contact-content-right {
+        width: 45%;
+        border-radius: 8px;
+
+        iframe {
+            width: 100%;
+            height: 324px;
+            border-radius: 8px;
+        }
+    }
+}

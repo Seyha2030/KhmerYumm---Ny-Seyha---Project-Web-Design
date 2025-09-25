@@ -1,5 +1,5 @@
 .navbar-cotent {
-    background-image: url(/images/hero-bg.jpg);
+    background-image: url(/images/image\ copy.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -13,19 +13,14 @@
     margin-top: 0;
     display: flex;
     justify-content: space-between;
+    background-color: black;
+    color: white;
 }
 
 //main-navbar
 .navbar {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #fff;
-    border-radius: 64px;
 }
 
 //top left

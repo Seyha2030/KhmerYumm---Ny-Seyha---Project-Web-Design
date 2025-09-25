@@ -21,11 +21,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
+    margin-top: $main-margin-top;
 }
 
 .menu-card {
     width: 30%;
-    margin-top: $main-margin-top;
     background: black;
     color: white;
     border-radius: 16px 16px 14px 14px;

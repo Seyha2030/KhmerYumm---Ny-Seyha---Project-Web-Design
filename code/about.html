@@ -1,82 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../dist/index.min.css">
-</head>
-<body>
-     <div class="navbsr-top">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../dist/index.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbsr-top">
             <h1>KhmerYumm</h1>
             <div class="navbar">
                 <div class="navbar-left">
                     <ul>
                         <li><a href="/index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./menu.html">Menu</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a class="active" href="/code/about.html">About</a></li>
+                        <li><a href="/code/menu.html">Menu</a></li>
+                        <li><a href="/code/contact.html">Contact</a></li>
+
                     </ul>
                 </div>
                 <div class="navbar-right">
                     <ul>
-                        <li><a href="#"><i class="fas fa-user-alt"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a href="#"><i class="material-icons">search</i></a></li>
+                        <!-- Account -->
+                        <li>
+                            <label for="toggleAccount" class="icon-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </label>
+                        </li>
+
+                        <!-- Shopping -->
+                        <li>
+                            <label for="toggleCart" class="icon-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </label>
+                        </li>
+
+                        <!-- Search -->
+                        <li>
+                            <label for="toggleSearch" class="icon-btn">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </li>
                     </ul>
-                    <button>Order Online</button>
+
+                    <button><a href="/code/menu.html">Order Online</a></button>
+
+                    <!-- Hidden Checkboxes -->
+                    <input type="checkbox" id="toggleSearch" hidden>
+                    <input type="checkbox" id="toggleAccount" hidden>
+                    <input type="checkbox" id="toggleCart" hidden>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit">Go</button>
+                        </form>
+                    </div>
+
+                    <!-- Account Form -->
+                    <div class="account-form">
+                        <form action="#">
+                            <h3>Login</h3>
+                            <input type="text" placeholder="Username"
+                                required>
+                            <input type="password" placeholder="Password"
+                                required>
+                            <button type="submit">Login</button>
+                            <p>No account? <br>
+                                <a href="#">Sign Up</a></p>
+                        </form>
+                    </div>
+
+                    <!-- Shopping Cart Form -->
+                    <div class="cart-form">
+                        <h3>Your Cart</h3>
+                        <p>Your card is empty</p>
+                        <p><strong>Total:</strong> $0</p>
+                        <button><a href="/code/menu.html">Start
+                                Shopping</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="about-mian">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="/images/about-img.png" alt>
+                <div class="about-content-left">
+                    <h3>We Are KhmerYum</h3>
+                    <p>We Are KhmerYum There are many variations of passages of
+                        Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or
+                        randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem
+                        Ipsum, you need to be sure there isn't anything
+                        embarrassing hidden in the middle of text. All</p>
+                    <button>Read more</button>
                 </div>
             </div>
         </div>
-    <div class="about-mian">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <img src="/images/f7.png" alt="">
-            <div class="about-content-left">
-                <h3>We Are Feane</h3>
-                <p>We Are FeaneThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All</p>
-                <button>Read more</button>
-            </div>
-        </div>
-    </div>
         <footer>
-        <div class="footer-top">
-            <div class="footer-top-left">
-                <h2>Contact</h2>
-                <span><i class='fas fa-map-marker-alt'></i>Location         </span>
-                <span><i class="material-icons">call</i>Call+855 0715714175</span>
-                <span><i class="material-icons">email</i>bkh144740@gmail.com</span>
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <h2>Contact</h2>
+                    <span><i class='fas fa-map-marker-alt'></i>Location </span>
+                    <span><i class="material-icons">call</i>Call+855
+                        0715714175</span>
+                    <span><i
+                            class="material-icons">email</i>bkh144740@gmail.com</span>
+                </div>
+                <div class="footer-top-center">
+                    <h2>KhmerYumm</h2>
+                    <p>Necessary, making this the first true generator on the
+                        Internet. It uses a dictionary of over 200 Latin words,
+                        combined with</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f icon"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter icon"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i
+                                    class="fab fa-linkedin-in icon"></i></a></li>
+                        <li>
+                            <a href="#"><i
+                                    class="fa-brands fa-square-instagram"></i></a></li>
+                        <li>
+                            <a href="#"><i
+                                    class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-top-right">
+                    <h2>Opening Hours</h2>
+                    <p>Everyday</p>
+                    <p>10.00 Am -10.00 Pm</p>
+                </div>
             </div>
-            <div class="footer-top-center">
-                <h2>KhmerYumm</h2>
-                <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
-               <ul>
-                    <li>
-                        <a href="#">
-                        <i class="fab fa-facebook-f icon"></i>    </a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter icon"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
-                </ul>
-            </div>
-            <div class="footer-top-right">
-                <h2>Opening Hours</h2>
-                <p>Everyday</p>
-                <p>10.00 Am -10.00 Pm</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 All Rights Reserved By Free Html Templates</p>
-            <p>© Distributed By ThemeWagon</p>
+            <div class="footer-bottom">
+                <p>© 2025 All Rights Reserved By Free Html Templates</p>
+                <p>© Distributed By ThemeWagon</p>
 
-        </div>
-    </footer>
-</body>
+            </div>
+        </footer>
+    </body>
 </html>

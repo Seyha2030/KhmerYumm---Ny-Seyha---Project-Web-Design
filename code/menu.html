@@ -1,131 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KhmerYumm</title>
-    <link rel="stylesheet" href="../dist/index.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
-     <div class="navbsr-top">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KhmerYumm</title>
+        <link rel="stylesheet" href="../dist/index.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbsr-top">
             <h1>KhmerYumm</h1>
             <div class="navbar">
                 <div class="navbar-left">
                     <ul>
                         <li><a href="/index.html">Home</a></li>
-                        <li><a href="./about.html">About</a></li>
-                        <li><a href="./menu.html">Menu</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="/code/about.html">About</a></li>
+                        <li><a class="active"
+                                href="/code/menu.html">Menu</a></li>
+                        <li><a href="/code/contact.html">Contact</a></li>
+
                     </ul>
                 </div>
                 <div class="navbar-right">
                     <ul>
-                        <li><a href="#"><i class="fas fa-user-alt"></i></a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                        <li><a href="#"><i class="material-icons">search</i></a></li>
+                        <!-- Account -->
+                        <li>
+                            <label for="toggleAccount" class="icon-btn">
+                                <i class="fas fa-user-alt"></i>
+                            </label>
+                        </li>
+
+                        <!-- Shopping -->
+                        <li>
+                            <label for="toggleCart" class="icon-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                            </label>
+                        </li>
+
+                        <!-- Search -->
+                        <li>
+                            <label for="toggleSearch" class="icon-btn">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </li>
                     </ul>
-                    <button>Order Online</button>
+
+                    <button><a href="/code/menu.html">Order Online</a></button>
+
+                    <!-- Hidden Checkboxes -->
+                    <input type="checkbox" id="toggleSearch" hidden>
+                    <input type="checkbox" id="toggleAccount" hidden>
+                    <input type="checkbox" id="toggleCart" hidden>
+
+                    <!-- Search Form -->
+                    <div class="search-form">
+                        <form action="#">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit">Go</button>
+                        </form>
+                    </div>
+
+                    <!-- Account Form -->
+                    <div class="account-form">
+                        <form action="#">
+                            <h3>Login</h3>
+                            <input type="text" placeholder="Username"
+                                required>
+                            <input type="password" placeholder="Password"
+                                required>
+                            <button type="submit">Login</button>
+                            <p>No account? <br>
+                                <a href="#">Sign Up</a></p>
+                        </form>
+                    </div>
+
+                    <!-- Shopping Cart Form -->
+                    <div class="cart-form">
+                        <h3>Your Cart</h3>
+                        <p>Your card is empty</p>
+                        <p><strong>Total:</strong> $0</p>
+                        <button><a href="/code/menu.html">Start
+                                Shopping</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Menu -->
+        <div class="menu-main">
+            <div class="menu-navbar">
+                <h2>Our menu</h2>
+                <div class="filter-btns">
+                    <button class="active"
+                        onclick="filterMenu('all')">All</button>
+                    <button onclick="filterMenu('khmer')">Khmer
+                        Food</button>
+                    <button onclick="filterMenu('fastFood')">Fast Foods</button>
+                </div>
+                <script>
+                    function filterMenu(category) {
+                    let cards = document.querySelectorAll('.menu-card');
+                    let buttons = document.querySelectorAll('.filter-btns button');
+
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    event.target.classList.add('active');
+
+                    cards.forEach(card => {
+                        if (category === 'all' || card.classList.contains(category)) {
+                        card.style.display = "block";
+                        } else {
+                        card.style.display = "none";
+                        }
+                    });
+                    }
+                </script>
+            </div>
+            <div class="menu-card-container">
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Loklak Sachko</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>9$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f1.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Delicious Pizza</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>20$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/pahok.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Pahok</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>3$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f2.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Delicious Burger</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>15$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (7).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Samlor Korko</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>3$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f3.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Delicious Pizza</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>17$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (11).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Samlor Tompeang</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>3$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f4.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Delicious Pasta</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>18$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (5).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Bay Sachmuan</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>3$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f5.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>French Fries</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>10$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (2).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Khmer Noodle</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>2$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f6.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Delicious Pizza</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>15$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f8.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Tasty Burger</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>14$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (12).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>samlor mchou krueng</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>3$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f9.png" alt>
+                    </div>
+                    <div class="menu-card-content">Delicious Pasta
+                        <h3></h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>10$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (4).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Samlor Kari</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>2.5$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (3).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Nom Kruck</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>8.5$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (8).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>samlor brahaer</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>2.5$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (10).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Cha Krueng</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>4$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card fastFood">
+                    <div class="menu-img">
+                        <img src="/images/f7.png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Tasty Burger</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>12$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+                </div>
+                <div class="menu-card khmer">
+                    <div class="menu-img">
+                        <img src="/images/download (1).png" alt>
+                    </div>
+                    <div class="menu-card-content">
+                        <h3>Amok</h3>
+                        <p>Veniam debitis quaerat officiis quasi cupiditate quo,
+                            quisquam velit, magnam voluptatem repellendus sed
+                            eaque</p>
+                    </div>
+                    <div class="menu-price">
+                        <span>8.5$</span>
+                        <button><i class="fas fa-shopping-cart"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-    
-    <div class="menu-main">
-        <div class="menu-navbar">
-            <h2>Our menu</h2>
-            <div class="content-navbar">
-                <a href="">All</a>
-                <a href="">Piza</a>
-                <a href="">Fries</a>
-                <a href="">Pasta</a>
-                <a href="">Chess</a>
-            </div>
-           
+        <div class="btn">
+            <button>View more</button>
         </div>
-        <div class="menu-card-container">
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
+        <footer>
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <h2>Contact</h2>
+                    <span><i class='fas fa-map-marker-alt'></i>Location </span>
+                    <span><i class="material-icons">call</i>Call+855
+                        0715714175</span>
+                    <span><i
+                            class="material-icons">email</i>bkh144740@gmail.com</span>
                 </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <div class="footer-top-center">
+                    <h2>KhmerYumm</h2>
+                    <p>Necessary, making this the first true generator on the
+                        Internet. It uses a dictionary of over 200 Latin words,
+                        combined with</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f icon"></i> </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter icon"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i
+                                    class="fab fa-linkedin-in icon"></i></a></li>
+                        <li>
+                            <a href="#"><i
+                                    class="fa-brands fa-square-instagram"></i></a></li>
+                        <li>
+                            <a href="#"><i
+                                    class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
                 </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
-                </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
-                </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
-                </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
-                </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
-                </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
-                </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
+                <div class="footer-top-right">
+                    <h2>Opening Hours</h2>
+                    <p>Everyday</p>
+                    <p>10.00 Am -10.00 Pm</p>
                 </div>
             </div>
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
-                </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
-                </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
-                </div>
+            <div class="footer-bottom">
+                <p>© 2025 All Rights Reserved By Free Html Templates</p>
+                <p>© Distributed By ThemeWagon</p>
+
             </div>
-            <div class="menu-card">
-                <div class="menu-img">
-                     <img src="/images/f5.png" alt="">
-                </div>
-                <div class="menu-card-content">
-                    <h3>Delicious Pizza</h3>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
-                </div>
-                <div class="menu-price">
-                    <span>20$</span>
-                    <button><i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button>View more</button>
-</body>
+        </footer>
+    </body>
 </html>

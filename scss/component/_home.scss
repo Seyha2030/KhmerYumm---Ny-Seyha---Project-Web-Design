@@ -1,30 +1,54 @@
+*{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+   margin: 0;
+  padding: 0;
+
+}
 .promotion-card-maain {
-  margin-top:$main-margin-top;
+  margin-top: $main-margin-top;
   color: black;
   display: flex;
-  justify-content: space-between;
+  padding:0 124px 0 124px ;
+  gap:40px;
 }
 
 .promotion-card {
-  width: 45%;
+  width: 50%;
   padding: 24px 16px;
   display: flex;
   background: black;
   color: white;
   border-radius: 8px;
 
+  .img {
+    border: 3px solid white;
+    height: 230px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2000px;
+
+  }
+
   img {
     height: 200px;
     width: 200px;
     border-radius: 100px;
-    border: 3px solid white;
+    transition: transform 0.4s ease;
+    overflow: hidden;
   }
 
   button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 24px;
-    height: 32px;
     border-radius: $border-btn;
-    width: 100px;
+    width:$width-btn;
+    padding: $button_padding;
     background-color: $bg-btn;
     color: white;
     border: none;
@@ -35,15 +59,27 @@
   }
 }
 
-//customer
-.customer-main{
-  margin-top: $main-margin-top;
+/* Hover Effect */
+.promotion-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+.promotion-card:hover img {
+  transform: scale(1.1);
+}
+
+
+//customer
+.customer-main {
+  margin-bottom: $main-margin-buttom;
+  text-align: center;
+}
+
 .testimonial-container {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
+  padding: 0 124px 0 124px;
   margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 
 .testimonial-card {
@@ -51,7 +87,8 @@
   color: #fff;
   padding: 20px;
   border-radius: 6px;
-  width: 45%;
+  width: 48%;
+  height: 120px;
   position: relative;
   display: none;
   /* hide by default */
@@ -89,9 +126,13 @@
 }
 
 .testimonial-nav button {
-  width: 40px;
-  height: 40px;
-  background: #fbbf24;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:$bg-btn;
+  color: white;
   border: none;
   border-radius: 50%;
   font-size: 20px;
@@ -100,32 +141,42 @@
 }
 
 .testimonial-nav button:hover {
-  background: #f59e0b;
+  background:$btn-hover;
 }
 
 footer {
-  margin-top: $main-margin-top;
   background: #000;
   color: white;
+
   .footer-top {
     display: flex;
     gap: 80px;
-//Footer top left
+
+    //Footer top left
     .footer-top-left {
       width: 30%;
       display: flex;
-      text-align:center;
+      text-align: center;
       flex-direction: column;
     }
-//Footer top center
+
+    //Footer top left hover
+    span:hover {
+      color: orange;
+    }
+
+    //Footer top center
     .footer-top-center {
       text-align: center;
       width: 30%;
+
       ul {
         display: flex;
         justify-content: center;
         gap: 40px;
-        li,a{
+
+        li,
+        a {
           height: 40px;
           width: 40px;
           display: flex;
@@ -134,18 +185,24 @@ footer {
           text-decoration: none;
           list-style: none;
           color: #000;
-          background:white;
+          background: white;
           border-radius: 64px;
+        }
+
+        a:hover {
+          color: orange;
         }
       }
     }
-//Footer top right
-.footer-top-right{
-  text-align: center;
-  width: 30%;
-}
+
+    //Footer top right
+    .footer-top-right {
+      text-align: center;
+      width: 30%;
+    }
 
   }
+
   .footer-bottom {
     margin-top: 40px;
     border-top: 1px solid #444;
@@ -155,3 +212,4 @@ footer {
     color: #aaa;
   }
 }
+

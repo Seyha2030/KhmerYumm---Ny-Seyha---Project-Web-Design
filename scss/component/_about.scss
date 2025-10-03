@@ -1,32 +1,39 @@
 .about-mian {
     text-align: center;
-    padding: $main-padding;
     background: #656363;
     color: white;
+    padding-top:$main-padding-top;
 }
 
 .about-content {
     display: flex;
+    gap: 40px;
+    padding: 40px 124px 40px 124px;
+    height: auto;
 
     img {
-        width: 45%;
-        height: 320px;
+        width: 50%;
+        height: 500px;
     }
 
     .about-content-left {
         display: flex;
         flex-direction: column;
-        width: 45%;
+        align-items: center;
+        width: 48%;
         height: auto;
 
         button {
             margin-top: 24px;
-            height: 32px;
+            padding: $button_padding;
             border-radius: $border-btn;
-            width: 100px;
+            width:$width-btn;
             background-color: $bg-btn;
             color: white;
             border: none;
+        }
+        button:hover{
+            background:$btn-hover;
         }
     }
 

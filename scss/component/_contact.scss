@@ -1,26 +1,29 @@
 .contact-main {
     height: auto;
     text-align: center;
+    padding: 0 124px;
 
-    button{
+    button {
         margin-top: 24px;
-        height: 32px;
+        padding: $button_padding;
         border-radius: $border-btn;
-        width: 100px;
+        width:$width-btn;
         background-color: $bg-btn;
         color: white;
         border: none;
     }
 }
 
+button:hover {
+    background:$btn-hover;
+}
+
 .contact-content {
     width: 100%;
     display: flex;
-    justify-content: center;
     gap: 40px;
-
     .contact-content-left {
-        width: 45%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -28,12 +31,13 @@
         input {
             height: 40px;
             border-radius: 5px;
+            padding-left: 24px;
             border: 0.50px solid gray;
         }
     }
 
     .contact-content-right {
-        width: 45%;
+        width: 50%;
         border-radius: 8px;
 
         iframe {

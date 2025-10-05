@@ -2,9 +2,8 @@
     text-align: center;
     background: #656363;
     color: white;
-    padding-top:$main-padding-top;
+    padding-top: $main-padding-top;
 }
-
 .about-content {
     display: flex;
     gap: 40px;
@@ -13,7 +12,7 @@
 
     img {
         width: 50%;
-        height: 500px;
+        height: 600px;
     }
 
     .about-content-left {
@@ -23,17 +22,26 @@
         width: 48%;
         height: auto;
 
+        h3 {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            font-weight: 60px;
+            font-size: 40px;
+            font-style: normal;
+        }
+
         button {
             margin-top: 24px;
             padding: $button_padding;
             border-radius: $border-btn;
-            width:$width-btn;
+            width: $width-btn;
             background-color: $bg-btn;
             color: white;
             border: none;
         }
-        button:hover{
-            background:$btn-hover;
+
+        button:hover {
+            background: $btn-hover;
         }
     }
 

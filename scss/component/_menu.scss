@@ -2,8 +2,10 @@
 .menu-main {
     margin-top: $main-margin-top;
     margin-bottom: $main-margin-buttom;
+    
 }
-.menu-navbar{
+
+.menu-navbar {
     text-align: center;
 }
 
@@ -79,7 +81,7 @@
         }
 
         button:hover {
-            background:$btn-hover;
+            background: $btn-hover;
         }
     }
 }
@@ -91,10 +93,10 @@
 }
 
 button {
-    background:$bg-btn;
+    background: $bg-btn;
     padding: $button_padding;
     margin-bottom: $main-margin-buttom;
-    width:$width-btn;
+    width: $width-btn;
     color: #fff;
     border: none;
     border-radius: $border-btn;
@@ -104,6 +106,9 @@ button {
 
 .menu-card:hover img,
 .menu-card:active img {
-    /* active = when clicking */
     transform: scale(1.1);
+}
+
+.menu-card:hover {
+    box-shadow: 0 8px 20px rgba(49, 47, 47, 0.3);
 }

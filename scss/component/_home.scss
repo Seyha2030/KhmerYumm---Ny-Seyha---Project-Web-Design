@@ -1,26 +1,54 @@
-*{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
 }
-body{
-   margin: 0;
+
+body {
+  margin: 0;
   padding: 0;
 
 }
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 60px;
+  font-size: 40px;
+  font-style: normal;
+}
+
+// Promotion
 .promotion-card-maain {
   margin-top: $main-margin-top;
   color: black;
   display: flex;
-  padding:0 124px 0 124px ;
-  gap:40px;
+  padding: 0 124px 0 124px;
+  gap: 40px;
 }
 
 .promotion-card {
   width: 50%;
-  padding: 24px 16px;
+  padding: 24px 40px;
   display: flex;
   background: black;
   color: white;
   border-radius: 8px;
+
+  h3 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 60px;
+    font-size: 40px;
+    font-style: normal;
+  }
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 60px;
+    font-size: 40px;
+    font-style: normal;
+  }
 
   .img {
     border: 3px solid white;
@@ -29,7 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 2000px;
+    border-radius: 90%;
 
   }
 
@@ -47,7 +75,7 @@ body{
     align-items: center;
     margin-top: 24px;
     border-radius: $border-btn;
-    width:$width-btn;
+    width: $width-btn;
     padding: $button_padding;
     background-color: $bg-btn;
     color: white;
@@ -59,7 +87,7 @@ body{
   }
 }
 
-/* Hover Effect */
+// Hover Effect
 .promotion-card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -67,7 +95,6 @@ body{
 .promotion-card:hover img {
   transform: scale(1.1);
 }
-
 
 //customer
 .customer-main {
@@ -91,7 +118,6 @@ body{
   height: 120px;
   position: relative;
   display: none;
-  /* hide by default */
 }
 
 .testimonial-card h4 {
@@ -131,7 +157,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background:$bg-btn;
+  background: $bg-btn;
   color: white;
   border: none;
   border-radius: 50%;
@@ -141,75 +167,7 @@ body{
 }
 
 .testimonial-nav button:hover {
-  background:$btn-hover;
+  background: $btn-hover;
 }
 
-footer {
-  background: #000;
-  color: white;
-
-  .footer-top {
-    display: flex;
-    gap: 80px;
-
-    //Footer top left
-    .footer-top-left {
-      width: 30%;
-      display: flex;
-      text-align: center;
-      flex-direction: column;
-    }
-
-    //Footer top left hover
-    span:hover {
-      color: orange;
-    }
-
-    //Footer top center
-    .footer-top-center {
-      text-align: center;
-      width: 30%;
-
-      ul {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-
-        li,
-        a {
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          list-style: none;
-          color: #000;
-          background: white;
-          border-radius: 64px;
-        }
-
-        a:hover {
-          color: orange;
-        }
-      }
-    }
-
-    //Footer top right
-    .footer-top-right {
-      text-align: center;
-      width: 30%;
-    }
-
-  }
-
-  .footer-bottom {
-    margin-top: 40px;
-    border-top: 1px solid #444;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    color: #aaa;
-  }
-}
 

@@ -1,5 +1,5 @@
 .navbar-cotent {
-  background-image: url(/images/photos/image.png);
+  background-image: url(/images/image.png);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -8,7 +8,7 @@
   height: 600px;
 }
 
-//Top
+//Navbar Top
 .navbsr-top {
   margin-top: 0;
   padding: 0 124px 0 124px;
@@ -18,8 +18,13 @@
   align-items: center;
   background-color: black;
   color: white;
-  h1{
-    font-family:Dancing Script;
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 60px;
+    font-size: 40px;
+    font-style: normal;
   }
 }
 
@@ -42,11 +47,10 @@
     text-decoration: none;
     color: $cl-btn;
   }
+
   a:hover,
-  a.active{
-    color:hsl(40, 95%, 54%);
-    // padding: 4px 8px;
-    // border-radius: 32px;
+  a.active {
+    color: hsl(40, 95%, 54%);
 
   }
 }
@@ -57,10 +61,12 @@
   align-items: center;
   gap: 15px;
   position: relative;
-  li:hover{
+
+  li:hover {
     color: #e65c00;
   }
-  label:hover{
+
+  label:hover {
     color: orange;
   }
 }
@@ -85,10 +91,10 @@
 }
 
 .navbar-right button {
-  background:$bg-btn;
+  background: $bg-btn;
   color: #fff;
   border: none;
-  padding:$button_padding;
+  padding: $button_padding;
   width: $width-btn;
   border-radius: $border-btn;
   cursor: pointer;
@@ -102,7 +108,7 @@
 }
 
 .navbar-right button:hover {
-  background:$btn-hover;
+  background: $btn-hover;
 }
 
 .icon-btn {
@@ -111,13 +117,19 @@
   color: white;
 }
 
-/* --- Search Form --- */
+// Search Form
 #toggleSearch~.search-form {
   display: none;
 
   form {
     display: flex;
     gap: 16px;
+
+    button {
+      width: 60px;
+      display: flex;
+      justify-content: center;
+    }
 
     input {
       width: 200px;
@@ -130,7 +142,9 @@
 
 #toggleSearch:checked~.search-form {
   display: block;
-  width: 260px;
+  margin-top: 24px;
+  justify-content: center;
+  width: 290px;
   position: absolute;
   top: 50px;
   right: 0;
@@ -142,7 +156,7 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* --- Account Form --- */
+//  Account Form
 #toggleAccount~.account-form {
   display: none;
 
@@ -162,7 +176,8 @@
 
 #toggleAccount:checked~.account-form {
   display: block;
-  width: 260px;
+  margin-top: 24px;
+  width: 290px;
   position: absolute;
   top: 50px;
   right: 0;
@@ -173,9 +188,13 @@
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.3s ease-in-out;
+
+  button {
+    align-self: center;
+  }
 }
 
-/* --- Shopping Cart Form --- */
+// Shopping Cart Form
 #toggleCart~.cart-form {
   display: none;
 
@@ -189,7 +208,8 @@
 
 #toggleCart:checked~.cart-form {
   display: block;
-  width: 260px;
+  margin-top: 24px;
+  width: 290px;
   position: absolute;
   top: 50px;
   right: 0;
@@ -212,9 +232,9 @@
 
 .cart-form button {
   width: 100%;
-  padding:$button_padding;
+  padding: $button_padding;
   border: none;
-  background: #ff6600;
+  background: $bg-btn;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -236,23 +256,31 @@
   }
 }
 
-
 //bottom
-
 .navbar-bottom {
   margin-top: 64px;
   width: 50%;
   padding-left: 124px;
+
+  h2 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-size: 60px;
+    font-style: normal;
+    margin-bottom: 0;
+
+  }
 
   p {
     margin-top: 24px;
   }
 
   button {
-    background:$bg-btn;
+    background: $bg-btn;
     color: #fff;
     border: none;
-    padding:$button_padding;
+    padding: $button_padding;
     width: 200px;
     border-radius: $border-btn;
     cursor: pointer;
@@ -263,7 +291,9 @@
       text-decoration: none;
     }
   }
-  button:hover{
-    background:$btn-hover;
+
+  button:hover {
+    background: $btn-hover;
   }
 }
+
